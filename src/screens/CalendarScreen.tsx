@@ -57,28 +57,28 @@ const CalendarScreen = () => {
 
     const ActivityCard = ({ item }) => (
         <TouchableOpacity style={styles.activityCard}>
-            <LinearGradient
-                colors={item.colors || ['#FFA07A', '#FA8072']}
-                style={styles.activityCardBorder}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 1 }}
-            >
+            {/*<LinearGradient*/}
+            {/*    colors={item.colors || ['#FFA07A', '#FA8072']}*/}
+            {/*    style={styles.activityCardBorder}*/}
+            {/*    start={{ x: 0, y: 0 }}*/}
+            {/*    end={{ x: 1, y: 1 }}*/}
+            {/*>*/}
                 <ImageBackground
-                    source={item.image ? item.image : placeholderImage}
+                    source={placeholderImage}
                     style={styles.activityCardImage}
                     imageStyle={styles.cardImageInner}
                 >
                     <View style={styles.activityCardContent}>
-                        <Text style={styles.activityCardTitleTop}>{item.number}</Text>
+                        {/*<Text style={styles.activityCardTitleTop}>{item.number}</Text>*/}
                         <Text style={styles.activityCardTitleBottom}>{item.title}</Text>
                     </View>
                 </ImageBackground>
-            </LinearGradient>
+            {/*</LinearGradient>*/}
         </TouchableOpacity>
     );
 
     const renderContent = () => {
-        const activitiesForSelectedDay = dailyActivities[selectedDay] || [];
+        const activitiesForSelectedDay = dailyActivities[`day_${selectedDay}`] || [];
 
         if (selectedDay === null) {
             return (

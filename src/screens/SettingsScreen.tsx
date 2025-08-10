@@ -14,8 +14,8 @@ const formatTime = (seconds) => {
 const SettingsScreen = ({navigation}) => {
     const [workRounds, setWorkRounds] = useState(4);
     const [restRounds, setRestRounds] = useState(3);
-    const [workTime, setWorkTime] = useState(10); // 4 минуты в секундах
-    const [restTime, setRestTime] = useState(10); // 2 минуты в секундах
+    const [workTime, setWorkTime] = useState(240); // 4 минуты = 240 секунд
+    const [restTime, setRestTime] = useState(120); // 2 минуты = 120 секунд
 
     const handleStart = () => {
         // Navigate to the TrainingScreen and pass the selected values as parameters

@@ -17,9 +17,7 @@ import MainTabNavigator from "./src/navigation/MainTabNavigator";
 import SettingsScreen from "./src/screens/SettingsScreen.tsx";
 import TrainingScreen from "./src/screens/TrainingScreen.tsx";
 import AddEventScreen from "./src/screens/AddEventScreen.tsx";
-// import HomeScreen from "./src/screens/HomeScreen.tsx";
-// import MainTabNavigator from "./src/navigation/MainTabNavigator";
-//
+
 
 const Stack = createStackNavigator();
 
